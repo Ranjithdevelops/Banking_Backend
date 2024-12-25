@@ -3,7 +3,7 @@ package com.banking.model;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 
-@Entity
+
 public class ResponseEntityObject {
 private String message;
 @Nullable
