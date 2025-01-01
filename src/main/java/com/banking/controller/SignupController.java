@@ -19,6 +19,7 @@ public class SignupController {
 	@PostMapping("/Signup")
 	public ResponseEntity<ResponseEntityObject> SignupValidation(@RequestBody SignupDetails Signup) {
 		boolean response=signupservice.Signup(Signup);
+		signupservice.emailMessageProducer(Signup.getEmail());
 		if(response) {
 			ResponseEntityObject responseObject=new ResponseEntityObject("Signup successful!!!","dasdasdhiasdaui");
 			return new ResponseEntity<ResponseEntityObject>(responseObject, HttpStatus.OK);
