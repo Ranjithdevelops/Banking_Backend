@@ -11,7 +11,7 @@ public class SignupDetails {
 	@jakarta.persistence.Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
-	private String username;
+	private String email;
 	private String password;
 	public Long getId() {
 		return Id;
@@ -19,11 +19,12 @@ public class SignupDetails {
 	public void setId(Long id) {
 		Id = id;
 	}
-	public String getUsername() {
-		return username;
+	
+	public String getEmail() {
+		return email;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getPassword() {
 		return password;
@@ -33,7 +34,7 @@ public class SignupDetails {
 	}
 	@Override
 	public String toString() {
-		return "SignupDetails [Id=" + Id + ", username=" + username + ", password=" + password + "]";
+		return "SignupDetails [Id=" + Id + ", email=" + email + ", password=" + password + "]";
 	}
 	
 }
